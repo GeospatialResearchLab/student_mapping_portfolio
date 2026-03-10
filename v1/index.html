@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #0f766e;
+      --border: #dbe4ee;
+      --shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      --max-width: 1000px;
+      --map-height: 420px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .container { width: min(92%, var(--max-width)); margin: 0 auto; }
+
+    header {
+      background: linear-gradient(135deg, #134e4a, #0f766e);
+      color: white;
+      padding: 3rem 0 2.5rem;
+    }
+    header h1 { margin: 0 0 0.5rem; font-size: clamp(2rem, 4vw, 3rem); }
+    header p { margin: 0; max-width: 700px; font-size: 1.05rem; color: rgba(255,255,255,0.92); }
+
+    main { padding: 2rem 0 3rem; }
+
+    .bio-card, .portfolio-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    .bio-card { padding: 1.5rem; margin-bottom: 2rem; }
+
+    .section-title { font-size: 1.4rem; margin: 0 0 1rem; }
+
+    .portfolio-grid { display: grid; gap: 1.5rem; }
+    .portfolio-item { padding: 1.25rem; }
+    .portfolio-item h3 { margin: 0 0 0.5rem; font-size: 1.2rem; }
+    .portfolio-item p { margin-top: 0; }
+
+    .portfolio-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .portfolio-link:hover, .portfolio-link:focus { text-decoration: underline; }
+
+    .media-wrapper {
+      background: #f3f4f6;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    iframe, .static-map-image {
+      display: block;
+      width: 100%;
+      height: var(--map-height);
+      border: 0;
+      background: white;
+    }
+    .static-map-image { object-fit: contain; }
+
+    footer {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 1.25rem 0;
+      font-size: 0.95rem;
+    }
+    footer .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer a { color: #a7f3d0; text-decoration: none; }
+    footer a:hover, footer a:focus { text-decoration: underline; }
+
+    @media (max-width: 700px) {
+      :root { --map-height: 320px; }
+      footer .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>[Student Name]</h1>
+      <p>Welcome to my portfolio site. This page includes a short bio and examples of my geospatial work.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="bio-card" aria-labelledby="bio-heading">
+      <h2 class="section-title" id="bio-heading">About Me</h2>
+      <p>
+        Replace this text with a brief bio. You might include your academic interests,
+        major, career goals, GIS experience, or the kinds of mapping projects you enjoy.
+      </p>
+    </section>
+
+    <section aria-labelledby="portfolio-heading">
+      <h2 class="section-title" id="portfolio-heading">Portfolio</h2>
+
+      <div class="portfolio-grid">
+
+        <!-- ===================== -->
+        <!-- Portfolio Item 1 -->
+        <!-- ===================== -->
+        <article class="portfolio-item">
+          <h3>Portfolio Item 1 Title</h3>
+          <p>Replace this with a short description of the map or project.</p>
+          <a href="https://example.com" class="portfolio-link">View Project 1</a>
+
+          <!-- OPTION A: Interactive web map (iframe) -->
+          <div class="media-wrapper">
+            <iframe src="https://example.com" title="Portfolio Item 1 Map" loading="lazy"></iframe>
+          </div>
+
+          <!-- OPTION B: Static map image (use instead of the iframe above)
+               To use a static map:
+               1) Delete or comment out the iframe block above.
+               2) Uncomment the <div> below and update the image path.
+          -->
+          <!--
+          <div class="media-wrapper">
+            <img src="images/pexels-pixabay-50577.jpg" alt="Static map for Portfolio Item 1" class="static-map-image">
+          </div>
+          -->
+        </article>
+
+        <!-- ===================== -->
+        <!-- Portfolio Item 2 -->
+        <!-- ===================== -->
+        <article class="portfolio-item">
+          <h3>Portfolio Item 2 Title</h3>
+          <p>Replace this with a short description of the second project.</p>
+          <a href="https://example.com" class="portfolio-link">View Project 2</a>
+
+          <!-- OPTION A: Interactive web map (iframe) -->
+          <!-- <div class="media-wrapper">
+            <iframe src="https://example.com" title="Portfolio Item 2 Map" loading="lazy"></iframe>
+          </div> -->
+
+          <!-- OPTION B: Static map image -->
+          
+          <div class="media-wrapper">
+            <img src="images/pexels-pixabay-50577.jpg" alt="Static map for Portfolio Item 2" class="static-map-image">
+          </div>
+         
+        </article>
+
+        <!-- ===================== -->
+        <!-- Portfolio Item 3 -->
+        <!-- ===================== -->
+        <article class="portfolio-item">
+          <h3>Portfolio Item 3 Title</h3>
+          <p>Replace this with a short description of the third project.</p>
+          <a href="https://example.com" class="portfolio-link">View Project 3</a>
+
+          <!-- OPTION A: Interactive web map (iframe) -->
+          <div class="media-wrapper">
+            <iframe src="https://example.com" title="Portfolio Item 3 Map" loading="lazy"></iframe>
+          </div>
+
+          <!-- OPTION B: Static map image (use instead of the iframe above) -->
+          <!--
+          <div class="media-wrapper">
+            <img src="images/pexels-pixabay-50577.jpg" alt="Static map for Portfolio Item 3" class="static-map-image">
+          </div>
+          -->
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>Page tools provided by the <strong><a href="https://www.american.edu/library/technology/geospatial/">Geospatial Research Lab</a></strong>.</div>
+      <div>Last updated: <span>March 10, 2026</span></div>
+    </div>
+  </footer>
+
+</body>
+</html>
