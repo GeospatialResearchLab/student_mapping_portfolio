@@ -6,7 +6,9 @@ This repository is a **break-proof personal portfolio** for GitHub Pages. You on
 
 ## 1) Fork This Repository
 
-1. Click **Fork** (top‑right) and choose your account.
+1. Click **Use this template** (top‑right) and choose **Create a new repository**.
+2. Choose your account under **Owner** and give the new repository a name. (Note: other people will see this name in the site URL, so choose wisely.)
+3. Click **Create repository** at the bottom of the page
 2. You now have your **own copy** of the site.
 
 ---
