@@ -1,6 +1,6 @@
 # Quick Start
 
-This repository is a **break-proof personal portfolio** for GitHub Pages. You only edit **one file**: `student-data.js`. The HTML structure stays locked so you can’t accidentally break the layout.
+This repository is a **break-proof personal portfolio** for GitHub Pages. You only edit **one file**: `student-data.js`.
 
 ---
 
